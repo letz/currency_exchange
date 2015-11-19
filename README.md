@@ -1,4 +1,7 @@
+[![Gem Version](https://badge.fury.io/rb/currency-exchange.svg)](https://badge.fury.io/rb/currency-exchange)
 [![Build Status](https://travis-ci.org/letz/currency_exchange.svg?branch=master)](https://travis-ci.org/letz/currency_exchange)
+[![Code Climate](https://codeclimate.com/github/letz/currency_exchange/badges/gpa.svg)](https://codeclimate.com/github/letz/currency_exchange)
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/c2fc5173497b4be699bd8e2a4b5a41d1)](https://www.codacy.com/app/letz/currency_exchange)
 
 # CurrencyExchange
 
