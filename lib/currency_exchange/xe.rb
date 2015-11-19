@@ -31,9 +31,9 @@ class CurrencyExchange::Xe
 
   def self.parse_rate(doc)
     exchange = doc.css('.uccResUnit').css('.leftCol')[0].inner_text
-    currency1, currency2 = exchange.split(' = ')
-    currency1 = currency1.split(' ').last
-    rate, currency2 = currency2.split(' ')
+    currency1, currency2 = exchange.gsub(/[\u0080-\u00ff]/, ' ').split(' = ')
+    currency1 = currency1.split(' ').last
+    rate, currency2 = currency2.split(' ')
     [currency1, currency2, rate]
   end
   private_class_method :request_rate, :query_builder, :parse_date, :parse_rate
