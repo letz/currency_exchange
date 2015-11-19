@@ -26,7 +26,7 @@ class CurrencyExchange::Yahoo
     node.each do |attribute|
       hash[attribute.name.downcase.to_sym] = attribute.inner_text
     end
-    CurrencyExchange::Rate.new(hash)
+    CurrencyExchange::Rate.new(hash[:name], hash[:rate], hash)
   end
 
   def self.query_builder(array)

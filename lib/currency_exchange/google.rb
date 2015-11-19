@@ -10,7 +10,7 @@ class CurrencyExchange::Google
     exchange = Nokogiri::HTML(resp).css('#currency_converter_result')
     currency1 = exchange.children.first.text.split(' ')[1]
     rate, currency2 = exchange.css('.bld').inner_text.split(' ')
-    CurrencyExchange::Rate.new(name: "#{currency1}/#{currency2}", rate: rate)
+    CurrencyExchange::Rate.new("#{currency1}/#{currency2}", rate)
   end
 
   def self.request_rate(query)
