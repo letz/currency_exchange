@@ -1,0 +1,10 @@
+require 'net/http'
+require 'uri'
+require 'nokogiri'
+require 'json'
+
+require 'currency_exchange/version'
+require 'currency_exchange/network'
+require 'currency_exchange/yahoo'
+require 'currency_exchange/google'
+require 'currency_exchange/rate'

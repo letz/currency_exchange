@@ -1,0 +1,46 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://openexchangerates.org/api/latest.json?app_id=nice_try&symbols=USD,GBP,HKD,EUR,AED,CAD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - openexchangerates.org
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Date:
+      - Thu, 19 Nov 2015 02:21:00 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '265'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "error": true,
+          "status": 403,
+          "message": "not_allowed",
+          "description": "Requesting specific symbols/currencies is only available for Enterprise and Unlimited clients - please upgrade, or contact support@openexchangerates.org with any questions. Thanks!"
+        }
+    http_version:
+  recorded_at: Thu, 19 Nov 2015 02:21:00 GMT
+recorded_with: VCR 2.9.3
