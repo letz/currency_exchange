@@ -13,6 +13,8 @@ class CurrencyExchange::Google
     CurrencyExchange::Rate.new("#{currency1}/#{currency2}", rate)
   end
 
+  # Private Methods
+
   def self.request_rate(query)
     CurrencyExchange::Network.get "#{BASE_URL}?#{query_builder(query)}"
   end
@@ -20,4 +22,5 @@ class CurrencyExchange::Google
   def self.query_builder(query)
     QUERY % query
   end
+  private_class_method :request_rate, :query_builder
 end

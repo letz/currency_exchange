@@ -265,3 +265,6 @@ UnderscorePrefixedVariableName:
 
 Void:
   Enabled: false
+
+Rails/TimeZone:
+  Enabled: false

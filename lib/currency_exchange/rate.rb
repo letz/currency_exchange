@@ -19,9 +19,19 @@ class CurrencyExchange::Rate
     CurrencyExchange::Yahoo.get_rates [[currency1, currency2]]
   end
 
+  private
+
   def parse_date(date, time)
+    parse_date_format(date, time) || parse_date_no_format(date) || Time.now
+  end
+
+  def parse_date_format(date, time)
     Time.strptime "#{date} #{time}", DATE_FORMAT
-  rescue ArgumentError
-    Time.now
+    rescue ArgumentError
+  end
+
+  def parse_date_no_format(date)
+    Time.parse date
+    rescue ArgumentError, TypeError
   end
 end
