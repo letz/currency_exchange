@@ -1,4 +1,4 @@
-https://travis-ci.org/letz/ruby-pushbullet.svg?branch=master
+[![Build Status](https://travis-ci.org/letz/currency_exchange.svg?branch=master)](https://travis-ci.org/letz/currency_exchange)
 
 # CurrencyExchange
 
